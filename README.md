@@ -48,15 +48,17 @@ in words.py. These will give you practice with reading files, strings and dictio
 FizzBuzz is infamous for being a simple programming problem that [a lot of software
 engineers struggle with](http://blog.codinghorror.com/why-cant-programmers-program/).
 
-* Implement the function in `fizzbuzz.py`.
+* Implement the function `fizzbuzz` in fizzbuzz.py.
 
-* Make note of how the default and keyword parameters work. What will all of these
-calls do?
+* Modify the function definition so that the following calls all work. You should have 3 and 5 be the default parameters.
 ([documentation](https://docs.python.org/2/tutorial/controlflow.html#default-argument-values))
 
-        fizzbuzz(12)
-        fizzbuzz(12, buzz=4)
-        fizzbuzz(12, fizz=5, buzz=7)
+        fizzbuzz(15)                  # "FizzBuzz"
+        fizzbuzz(15, fizz=4)          # "Buzz"
+        fizzbuzz(15, buzz=4)          # "Fizz"
+        fizzbuzz(15, fizz=6, buzz=7)  # ""
+
+    Now in the main block you should be able to remove the 2nd and 3rd parameters.
 
 * Look at how the main function uses `sys.argv`. You can run your program with this
 command in the command line:
@@ -67,7 +69,7 @@ command in the command line:
 
         python words.py alice.txt 200
 
-You'll have to import the `sys` module and use `sys.argv` ([documentation](https://docs.python.org/2/library/sys.html))
+    You'll have to import the `sys` module and use `sys.argv` ([documentation](https://docs.python.org/2/library/sys.html))
 
 #### 4. Bonus Projects
 

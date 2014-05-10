@@ -1,6 +1,6 @@
 import sys
 
-def fizzbuzz(num, fizz=3, buzz=5):
+def fizzbuzz(num, fizz, buzz):
     '''
     INPUT: int, int, int
     OUTPUT: string
@@ -15,4 +15,4 @@ def fizzbuzz(num, fizz=3, buzz=5):
 
 
 if __name__ == '__main__':
-    print fizzbuzz(int(sys.argv[1]))
+    print fizzbuzz(int(sys.argv[1]), 3, 5)
