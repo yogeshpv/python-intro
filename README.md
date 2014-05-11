@@ -59,7 +59,7 @@ You may be able to use `DefaultDict` and `Counter` to simplify your code.
 FizzBuzz is infamous for being a simple programming problem that [a lot of software
 engineers struggle with](http://blog.codinghorror.com/why-cant-programmers-program/).
 
-* Implement the function `fizzbuzz` in fizzbuzz.py.
+* Implement the function `fizzbuzz` in fizzbuzz.py. Don't worry, this is not the main point of this question.
 
 * Modify the function definition so that the following calls all work. You should have 3 and 5 be the default parameters.
 ([documentation](https://docs.python.org/2/tutorial/controlflow.html#default-argument-values))
