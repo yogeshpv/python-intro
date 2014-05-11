@@ -26,22 +26,33 @@ After today, you should be comfortable with these topics in python:
 * Functions
 * Lists
 * List comprehensions
-* map and filter
+* lambda functions
+* map, filter and reduce
+* zip and enumerate
 * Dictionaries
+* Sets
+* itertools & collections modules (some familiarity)
+
+Test yourself with these questions:
+1. What's the difference between a list and a generator? And the advantages of either?
+2. What is the advantage of storing a word list in a set rather than a list?
 
 
 ### Assignment
 
-#### 1. Practice with lists
+#### 1. Practice with built-ins
 
 Fill in the functions in problems.py.
 
-These are all one-liners that use list comprehension, map and filter.
+These are all one-liners that use a bunch of handy built-in functions.
 
 #### 2. Generating text
 
 Fill in the functions `word_counts`, `associated_words` and `make_random_story`
 in words.py. These will give you practice with reading files, strings and dictionaries.
+
+Take a look at the [Collections module](https://docs.python.org/2/library/collections.html).
+You may be able to use `DefaultDict` and `Counter` to simplify your code.
 
 #### 3. Extra fun with Python
 
