@@ -18,6 +18,7 @@ useful to you as you're working through today's exercise:
 [dictionaries](https://docs.python.org/2/tutorial/datastructures.html#dictionaries)
 * [Strings](https://docs.python.org/2/library/string.html): particularly
 strip and split
+* [Lecture Notes](python.md): Examples from the day's lecture
 
 
 ### Goals
