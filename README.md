@@ -5,7 +5,9 @@ Python built-in functions and data structures.
 
 ### Resources
 
-Python has good documentation.
+Here are the [lecture notes](python.md) from the day's lecture.
+
+And also Python has good documentation.
 The [Python tutorial](https://docs.python.org/2/tutorial/) and
 [Python library](https://docs.python.org/2/library/) are great resources if
 you need to look up how something is done in Python.
@@ -18,7 +20,6 @@ useful to you as you're working through today's exercise:
 [dictionaries](https://docs.python.org/2/tutorial/datastructures.html#dictionaries)
 * [Strings](https://docs.python.org/2/library/string.html): particularly
 strip and split
-* [Lecture Notes](python.md): Examples from the day's lecture
 
 
 ### Goals
