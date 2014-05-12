@@ -34,6 +34,7 @@ After today, you should be comfortable with these topics in python:
 * itertools & collections modules (some familiarity)
 
 Test yourself with these questions:
+
 1. What's the difference between a list and a generator? And the advantages of either?
 2. What is the advantage of storing a word list in a set rather than a list?
 
