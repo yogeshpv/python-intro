@@ -41,6 +41,8 @@ Test yourself with these questions:
 
 ### Assignment
 
+There are three parts to this sprint. Part 1 is by far the longest.
+
 #### 1. Practice with built-ins
 
 Fill in the functions in problems.py.
