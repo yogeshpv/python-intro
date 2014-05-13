@@ -79,7 +79,7 @@ engineers struggle with](http://blog.codinghorror.com/why-cant-programmers-progr
 * Look at how the main function uses `sys.argv`. You can run your program with this
 command in the command line:
 
-        python fizzbuzz 20
+        python fizzbuzz.py 20
 
     Modify `words.py` so that you can run your program like this:
 
