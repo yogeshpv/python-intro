@@ -122,7 +122,7 @@ If you're done with all the above, well done! For additional practice, choose on
 * Hangman game
 * Towers of Hanoi
 * Number in words (312 => "three hundred and twelve")
-* 
+
 ## What you should know
 
 ### Python
