@@ -7,13 +7,15 @@ We will be using [Anaconda](https://store.continuum.io/cshop/anaconda/) with Pyt
 * NumPy
 * SciPy
 * Pandas
-* Statsmodels
+* statsmodels
 * MatPlotLib
 * IPython
+* nose
+* pep8
 
 You can see the [full list of packages](http://docs.continuum.io/anaconda/pkg-docs.html) if you are so inclined.
 
-You can use [conda](http://www.continuum.io/blog/conda) to install any packages that are not included.
+You can use [conda](http://www.continuum.io/blog/conda) or pip to install any packages that are not included.
 
 
 #### Step 2: Install Sublime
