@@ -2,6 +2,22 @@
 
 The goal of this assignment is to familiarize yourself with some advanced python features so that you can write cleaner, more efficient code.
 
+## Part 0: Fork and clone the repo
+
+You should make your own copy of the repository so that you can edit it and at the end submit a pull request.
+
+1. Create a fork of this repo by clicking on the **Fork** link in the upper right.
+2. Checkout your personal copy of the repo: `git clone https://github.com/<username>/python-intro`
+
+### How to submit?
+1. `git add filename` for all the files you want to add.
+2. `git commit -m "Message describing what you did"`
+3. `git push origin master`
+4. Now if you go to your personal copy on github, your changes should be there: `https://github.com/<username>/python-intro`
+5. From there, click on **Pull Requests** and then **New pull request**.
+
+Ideally, you should regularly run steps 1-3. This will save your work as you go. And if you ever goof things up, you will have all the history, you can revert any file to how it was at any previous commit!
+
 ## Part 1: Fill in some functions
 
 In this part, you will fill in the functions in `functions.py` according to their docstrings. We've written some test code for you in `test_functions.py`.
