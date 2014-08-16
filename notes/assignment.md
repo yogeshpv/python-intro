@@ -24,12 +24,15 @@ In this part, you will fill in the functions in `functions.py` according to thei
 
 The tests are written with the `nose` module and you can run the tests in the command line:
 
-    nosetests
+```shell
+nosetests
+```
 
 Don't forget to run the pep8 style checker!
 
-    pep8 functions.py
-
+```shell
+pep8 functions.py
+```
 
 ## Part 2: Efficiency
 
@@ -76,11 +79,15 @@ You are given two files which contain reviews from two different sources. They f
 
 Take a look at the data. In the command line, this is especially useful if you have large files:
 
-    head data/reviews1.txt
+```shell
+head data/reviews1.txt
+```
 
 Or even just look at the first line:
 
-    head -n 1 data/reviews 1.txt
+```shell
+head -n 1 data/reviews 1.txt
+```
 
 The line `il-Yamo   5` means that restaurant `Yamo` was given a rating of `5` by user `il`. Don't read too much into the review values, this was randomly generated "data". All of the places are local favorites :)
 
@@ -88,7 +95,9 @@ You would like to know for each restaurant their average rating from each source
 
 You should write a python script which can be run on the commandline like this:
 
-    python script.py data/reviews1.txt data/reviews2.txt out.csv
+```shell
+python script.py data/reviews1.txt data/reviews2.txt out.csv
+```
 
 Notes:
 
