@@ -261,36 +261,48 @@ In Python, you can use lambda to define unnamed functions. This is really useful
 
 All things you can do with list comprehensions you can also do with `map`. It's more "Pythonic" to use list comprehensions, but understanding how to write maps is key for numpy and pandas, modules we will be using heavily.
 
-    # Double every element of a list
-    def double_list(L):
-        return map(lambda x: x * 2, L)
+```python
+# Double every element of a list
+def double_list(L):
+    return map(lambda x: x * 2, L)
+```
 
 The if statement syntax is very similar to in list comprehensions. Here's the same example (double positive numbers but not negative numbers):
 
-    map(lambda x: x * 2 if x > 0 else x, L)
+```python
+map(lambda x: x * 2 if x > 0 else x, L)
+```
 
 You can also use `map` with already implemented functions, like `abs` (absolute value):
 
-    L = [0, 5, -8, 9, -3, -2]
-    M = map(abs, L)  # [0, 5, 8, 9, 3, 2]
+```python
+L = [0, 5, -8, 9, -3, -2]
+M = map(abs, L)  # [0, 5, 8, 9, 3, 2]
+```
 
 The build-in `reduce` can be used to implement agregate functions. Here's an implementation of sum (if sum wasn't already implemented in python):
 
-    def sum(L):
-        total = 0
-        for x in L:
-            total += x
-        return total
+```python
+def sum(L):
+    total = 0
+    for x in L:
+        total += x
+    return total
+```
 
 But we can do this so much quicker if we use `reduce`. Here `total` is the running total and `x` is the new element from the list.
 
-    def sum(L):
-        return reduce(lambda total, x: total + x, L)
+```python
+def sum(L):
+    return reduce(lambda total, x: total + x, L)
+```
 
 And here's a `len` function. Note that we gave an initial value of 0. The default initial value is the first element of the list, which works fine for sum, but not for len.
 
-    def len(L):
-        return reduce(lambda total, x: total + 1, L, 0)
+```python
+def len(L):
+    return reduce(lambda total, x: total + 1, L, 0)
+```
 
 
 ## Sets and Dictionaries
