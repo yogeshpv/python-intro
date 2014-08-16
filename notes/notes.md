@@ -292,7 +292,7 @@ def sum(L):
     return total
 ```
 
-But we can do this so much quicker if we use `reduce`. Here `total` is the running total and `x` is the new element from the list.
+But we can do this so much more simply if we use `reduce`. Here `total` is the running total and `x` is the new element from the list.
 
 ```python
 def sum(L):
