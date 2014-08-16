@@ -255,9 +255,11 @@ Out[2]: 'giovanna-ryan-jonathan'
 
 In Python, you can use lambda to define unnamed functions. This is really useful for being able to customize `sort` and use functions like `map`, `filter` and `reduce`.
 
-    # Sort by first element of tuple
-    L = [(2, 4), (5, 3), (6, 8), (4, 1)]
-    L.sort(key=lambda x: x[0])
+```python
+# Sort by first element of tuple
+L = [(2, 4), (5, 3), (6, 8), (4, 1)]
+L.sort(key=lambda x: x[0])
+```
 
 All things you can do with list comprehensions you can also do with `map`. It's more "Pythonic" to use list comprehensions, but understanding how to write maps is key for numpy and pandas, modules we will be using heavily.
 
