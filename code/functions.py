@@ -92,6 +92,9 @@ def merge_dictionaries(d1, d2):
     example:
     INPUT: {"a": 2, "b": 5}, {"a": 7, "c":10}
     OUTPUT: {"a": 9, "b": 5, "c": 10}
+
+    Create a new dictionary that contains all the key, value pairs from d1 and
+    d2. If a key is in both dictionaries, sum the values.
     """
 
     pass
