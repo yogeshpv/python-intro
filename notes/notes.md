@@ -236,18 +236,18 @@ Out[6]: [4, 6, 2]
 You can make it a generator instead of a list if you're just going to be looping over the result anyways. You do this by using round brackets instead of square ones:
 
 ```python
-L = [("giovanna", "thron"), ("ryan", "orban"), ("jonathan", "dinu")]
-for name in (L[0] for item in L):
+L = ["zack desario", "giovanna thron", "ryan orban", "jonathan dinu"]
+for name in (item.split()[0] for item in L):
     print name
 ```
 
 Another example is if you're just going to put the result into another function that can use a generator:
 
 ```python
-In [1]: L = [("giovanna", "thron"), ("ryan", "orban"), ("jonathan", "dinu")]
+In [1]: L = ["zack desario", "giovanna thron", "ryan orban", "jonathan dinu"]
 
-In [2]: "-".join(item[0] for item in L)
-Out[2]: 'giovanna-ryan-jonathan'
+In [2]: "-".join(item.split()[0] for item in L)
+Out[2]: 'zack-giovanna-ryan-jonathan'
 ```
 
 
@@ -316,7 +316,7 @@ Python has some specialized datatypes that come in very handy!
 Dictionaries are an implementation of hash tables (like Java's hashmaps if you're familiar with them). It's basically a way of matching key, value pairs. Here is an example:
 
 ```python
-homestate = {"giovanna": "maine", "ryan": "california", "katie": "michigan"}
+homestate = {"giovanna": "maine", "ryan": "california", "katie": "michigan", "zack": "new york"}
 ```
 
 You can easily lookup a person's homestate like this:
