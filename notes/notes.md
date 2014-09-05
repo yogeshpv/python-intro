@@ -157,7 +157,7 @@ If you want like a combination of zip and enumerate, you can do the following an
 ```python
 from itertools import izip, count
 
-for i, first, last i izip(count(), first_names, last_names):
+for i, first, last in izip(count(), first_names, last_names):
     print i, first, last
 ```
 
@@ -233,7 +233,7 @@ Out[6]: [4, 6, 2]
 
 ### Generator comprehensions
 
-You can make it a generator instead of a list if you're just going to be looping over the result anyways. You do this by using round brackets instead of square ones:
+You can make it a generator instead of a list if you're just going to be looping over the result. You do this by using round brackets instead of square ones:
 
 ```python
 L = ["zack desario", "giovanna thron", "ryan orban", "jonathan dinu"]
@@ -253,7 +253,7 @@ Out[2]: 'zack-giovanna-ryan-jonathan'
 
 ## Lambda Functions
 
-In Python, you can use lambda to define unnamed functions. This is really useful for being able to customize `sort` and use functions like `map`, `filter` and `reduce`.
+In Python, you can use `lambda` to define unnamed functions. This is really useful for being able to customize `sort` and use functions like `map`, `filter` and `reduce`.
 
 ```python
 # Sort by first element of tuple
@@ -269,7 +269,7 @@ def double_list(L):
     return map(lambda x: x * 2, L)
 ```
 
-The if statement syntax is very similar to in list comprehensions. Here's the same example (double positive numbers but not negative numbers):
+The if statement syntax is very similar to list comprehension syntax. Here's the same example (double positive numbers but not negative numbers):
 
 ```python
 map(lambda x: x * 2 if x > 0 else x, L)
@@ -282,7 +282,7 @@ L = [0, 5, -8, 9, -3, -2]
 M = map(abs, L)  # [0, 5, 8, 9, 3, 2]
 ```
 
-The build-in `reduce` can be used to implement agregate functions. Here's an implementation of sum (if sum wasn't already implemented in python):
+The build-in `reduce` can be used to implement aggregation functions. Here's an implementation of `sum` (if sum wasn't already implemented in python):
 
 ```python
 def sum(L):
@@ -299,7 +299,7 @@ def sum(L):
     return reduce(lambda total, x: total + x, L)
 ```
 
-And here's a `len` function. Note that we gave an initial value of 0. The default initial value is the first element of the list, which works fine for sum, but not for len.
+And here's a `len` function. Note that we gave an initial value of 0. The default initial value is the first element of the list, which works fine for `sum`, but not for `len`.
 
 ```python
 def len(L):
@@ -361,7 +361,7 @@ DO NOT do `if k in d.keys():`. This is horribly inefficient. You are creating a 
 
 ### Counter and defaultdict
 
-You are very often using dictionaries to count things or where the type is always the same. In the module 'collections' there are a couple useful datatypes. Let's say you want to get a count of the number of occurrences of each character in a string. You could do this:
+You are very often using dictionaries to count things or where the type is always the same. In the module `collections` there are a couple useful datatypes. Let's say you want to get a count of the number of occurrences of each character in a string. You could do this:
 
 ```python
 letter_count = {}
@@ -375,7 +375,7 @@ from collections import Counter
 letter_count = Counter(word)
 ```
 
-Let's say you have a list. You want to know all the idicies that each value appears on. With a stardard dictionary, you could do this:
+Let's say you have a list. You want to know all the indicies that each value appears on. With a stardard dictionary, you could do this:
 
 ```python
 lst = ['a', 'b', 'a', 'c', 'd', 'c', 'a']
