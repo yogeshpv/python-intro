@@ -73,7 +73,7 @@ For `list_of_words` and `find_new_words` you should be able to get a *big* impro
 3. Run `timeit` again and make note of the improved runtime.
 4. Write a comment next to each function explaining why your version is faster.
 
-**Some of these may be tricky to spot. If you can't find the issue in 10 minutes, ask a neighbor or instructor for a hint.**
+**These are all very small changes and may be tricky to spot. If you can't find the issue in 5-10 minutes, ask a neighbor or instructor for a hint.**
 
 
 ## Part 3: A Python Script
