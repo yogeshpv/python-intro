@@ -386,13 +386,10 @@ In [1]: from collections import Counter, defaultdict
 
 In [2]: c = Counter()
 
-In [3]: d['abc']
-Out[3]: ''
+In [3]: c['abc']
+Out[3]: 0
 
-In [4]: c['abc']
-Out[4]: 0
-
-In [5]: d = defaultdict(str)
+In [4]: d = defaultdict(str)
 
 In [5]: d['abc']
 Out[5]: ''
