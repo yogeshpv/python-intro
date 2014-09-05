@@ -71,7 +71,7 @@ For `list_of_words` and `find_new_words` you should be able to get a *big* impro
 1. Run `timeit` to get a measure of how well the original version does. Make note of this value.
 2. Make your change to the file.
 3. Run `timeit` again and make note of the improved runtime.
-4. Write a comment next to each function explaining why your version is faster.
+4. Write a comment next to each function with the runtime speedup and an explanation of why your version is faster.
 
 **These are all very small changes and may be tricky to spot. If you can't find the issue in 5-10 minutes, ask a neighbor or instructor for a hint.**
 
