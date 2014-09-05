@@ -361,7 +361,48 @@ DO NOT do `if k in d.keys():`. This is horribly inefficient. You are creating a 
 
 ### Counter and defaultdict
 
-You are very often using dictionaries to count things or where the type is always the same. In the module `collections` there are a couple useful datatypes. Let's say you want to get a count of the number of occurrences of each character in a string. You could do this:
+You are very often using dictionaries to count things or where the type is always the same. In the module `collections` there are a couple useful datatypes.
+
+`Counter` and `defaultdict` have default values for keys that haven't been seen before. For a `Counter`, the default value will be 0. For a `defaultdict`, the default value will be dependent on what you give it.
+
+With a standard dictionary, you can't access a new key:
+
+```python
+In [1]: d = {}
+
+In [2]: d['abc']
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-6-e51fd128be60> in <module>()
+----> 1 d['abc']
+
+KeyError: 'abc'
+```
+
+But with a `Counter` or `defaultdict`, this would be no problem.
+
+```python
+In [1]: from collections import Counter, defaultdict
+
+In [2]: c = Counter()
+
+In [3]: d['abc']
+Out[3]: ''
+
+In [4]: c['abc']
+Out[4]: 0
+
+In [5]: d = defaultdict(str)
+
+In [5]: d['abc']
+Out[5]: ''
+```
+
+Note that `d` here has a default value of an empty string since we gave it the argument `str`. Besides how they deal with new keys, these two datatypes work the same as standard dictionaries.
+
+#### Examples
+
+Let's say you want to get a count of the number of occurrences of each character in a string. You could do this:
 
 ```python
 letter_count = {}
@@ -396,8 +437,6 @@ d = defaultdict(list)
 for i, item in enumerate(lst):
     d[item].append(i)
 ```
-
-These both have all of the same functionality of standard dictionaries.
 
 
 ### Sets
