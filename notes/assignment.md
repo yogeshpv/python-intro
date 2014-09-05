@@ -34,7 +34,43 @@ Don't forget to run the pep8 style checker!
 pep8 functions.py
 ```
 
-## Part 2: Efficiency
+
+## Part 2: A Python Script
+
+You are given two files which contain reviews from two different sources. They files are in the `data` folder: `reviews1.txt` and `reviews2.txt`.
+
+Take a look at the data. In the command line, this is especially useful if you have large files:
+
+```shell
+head data/reviews1.txt
+```
+
+Or even just look at the first line:
+
+```shell
+head -n 1 data/reviews 1.txt
+```
+
+The line `il-Yamo   5` means that restaurant `Yamo` was given a rating of `5` by user `il`. Don't read too much into the review values, this was randomly generated "data". All of the places are local favorites :)
+
+You would like to know for each restaurant their average rating from each source. You will create a file with lines like this: `yamo,3.25,2.2`. The lines should be in *sorted order*. Make sure that you match the names even if their capitalization isn't the same. If a restaurant is in one file, but not the other, you should still include it and give a reasonable value for the missing number. You can see an example ouput in `example_out.csv`.
+
+You should write a python script which can be run on the commandline like this:
+
+```shell
+python script.py data/reviews1.txt data/reviews2.txt out.csv
+```
+
+Notes:
+
+1. Use functions to make your code clean and easy to read. Nothing besides import statements and the main block (`if __name__ == '__main__':`) should be outside of functions.
+2. Use the `argparse` module for getting input (it's a little cleaner than just using `sys.argv`). Look at the [documentation](https://docs.python.org/dev/library/argparse.html) to figure out how to use it.
+3. Use a `defaultdict` for storing all the restaurant reviews.
+4. For extra credit, use the `re` module for parsing the line ([documentation](https://docs.python.org/2/library/re.html)).
+5. You can compare your result to ours with: `diff out.csv example_out.csv`
+
+
+## Part 3: Efficiency
 
 The file `efficiency.py` contains some poorly written code. It's your job to fix it up. It all works correctly, but it could be made more efficient.
 
@@ -71,38 +107,3 @@ For `list_of_words` and `find_new_words` you should be able to get a *big* impro
 2. Make your change to the file.
 3. Run `timeit` again and make note of the improved runtime.
 4. Write a comment next to each function explaining why your version is faster.
-
-
-## Part 3: A Python Script
-
-You are given two files which contain reviews from two different sources. They files are in the `data` folder: `reviews1.txt` and `reviews2.txt`.
-
-Take a look at the data. In the command line, this is especially useful if you have large files:
-
-```shell
-head data/reviews1.txt
-```
-
-Or even just look at the first line:
-
-```shell
-head -n 1 data/reviews 1.txt
-```
-
-The line `il-Yamo   5` means that restaurant `Yamo` was given a rating of `5` by user `il`. Don't read too much into the review values, this was randomly generated "data". All of the places are local favorites :)
-
-You would like to know for each restaurant their average rating from each source. You will create a file with lines like this: `yamo,3.25,2.2`. The lines should be in *sorted order*. Make sure that you match the names even if their capitalization isn't the same. If a restaurant is in one file, but not the other, you should still include it and give a reasonable value for the missing number. You can see an example ouput in `example_out.csv`.
-
-You should write a python script which can be run on the commandline like this:
-
-```shell
-python script.py data/reviews1.txt data/reviews2.txt out.csv
-```
-
-Notes:
-
-1. Use functions to make your code clean and easy to read. Nothing besides import statements and the main block (`if __name__ == '__main__':`) should be outside of functions.
-2. Use the `argparse` module for getting input (it's a little cleaner than just using `sys.argv`). Look at the [documentation](https://docs.python.org/dev/library/argparse.html) to figure out how to use it.
-3. Use a `defaultdict` for storing all the restaurant reviews.
-4. For extra credit, use the `re` module for parsing the line ([documentation](https://docs.python.org/2/library/re.html)).
-5. You can compare your result to ours with: `diff out.csv example_out.csv`
