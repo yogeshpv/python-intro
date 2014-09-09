@@ -36,6 +36,10 @@ def test_most_common_letters():
 
 def test_merge_dictionaries():
     d1 = {"a": 3, "b": 9, "c": 4}
+    d1_copy = d1.copy()
     d2 = {"b": 12, "c": 11, "d": 2, "e": 5}
+    d2_copy = d2.copy()
     result = functions.merge_dictionaries(d1, d2)
+    n.assert_equal(d1, d1_copy, 'd1 was changed')
+    n.assert_equal(d2, d2_copy, 'd2 was changed')
     n.assert_equal(result, {"a": 3, "b": 21, "c": 15, "d": 2, "e": 5})
