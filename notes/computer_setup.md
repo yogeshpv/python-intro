@@ -15,8 +15,11 @@ We will be using [Anaconda](https://store.continuum.io/cshop/anaconda/) with Pyt
 
 You can see the [full list of packages](http://docs.continuum.io/anaconda/pkg-docs.html) if you are so inclined.
 
-You can use [conda](http://www.continuum.io/blog/conda) or pip to install any packages that are not included.
+You can use [conda](http://www.continuum.io/blog/conda) or pip to install any packages that are not included like this:
 
+```
+pip install flask
+```
 
 #### Step 2: Install Sublime
 
