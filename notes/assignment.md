@@ -54,7 +54,7 @@ In [2]: import efficiency
 
 In [3]: word_dict = pickle.load(open("data/word_dict.pkl"))
 
-In [4]: timeit efficiency.find_new_words(open("data/alice.txt"), word_dict)
+In [4]: %timeit efficiency.find_new_words(open("data/alice.txt"), word_dict)
 1 loops, best of 3: 21 s per loop
 ```
 
