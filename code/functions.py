@@ -4,7 +4,7 @@ from itertools import izip, count
 
 def write_to_file(lst, f):
     """
-    INPUT: list, file
+    INPUT: list, open file object
     OUTPUT: None
 
     Write the list to the file with line numbers, starting at 1.
@@ -22,7 +22,7 @@ def write_to_file(lst, f):
 
 def merge_files(f1, f2, out):
     """
-    INPUT: file, file, file
+    INPUT: open file, open file, open file
     OUTPUT: None
 
     f1 and f2 are two files with the same number of lines. Merge the contents
