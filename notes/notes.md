@@ -169,7 +169,7 @@ For simple things, you can do your for loop on one line. Let's say you want to c
 ```python
 doubled = []
 for item in L:
-    doubled.append(item)
+    doubled.append(item * 2)
 ```
 
 But using a list comprehension, you can do this:
@@ -186,10 +186,10 @@ You can similarly do a double for loop. This is what it would look like the stan
 L = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 doubled = []
 for row in L:
-    row = []
+    row2 = []
     for item in row:
-        row.append(item * 2)
-    doubled.append9=(row)
+        row2.append(item * 2)
+    doubled.append(row2)
 ```
 
 And with a list comprehension:
@@ -404,7 +404,7 @@ Let's say you want to get a count of the number of occurrences of each character
 ```python
 letter_count = {}
 for char in word:
-    letter_count = letter_count.get(char, 0) + 1
+    letter_count[char] = letter_count.get(char, 0) + 1
 ```
 
 If you use `Counter`, you can just do this:
