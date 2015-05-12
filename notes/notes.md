@@ -17,6 +17,24 @@
 
 We recommend using `ipython` rather than the standard python terminal to test out your code. Here are some cool things you can do with `ipython`:
 
+1. View the docstring for any python object using `?object`, this is a shorcut for `help(obj)`.
+    ```python
+    ?In [5]: ?map
+    Type:        builtin_function_or_method
+    String form: <built-in function map>
+    Namespace:   Python builtin
+    Docstring:
+    map(function, sequence[, sequence, ...]) -> list
+
+    Return a list of the results of applying the function to the items of...
+```    
+1. Use tab completion to list possible completions for keywords, and
+object attributes. This is similar to using `dir()`.
+    ```python
+    In [8]: ma #Press tab...
+    %macro       %magic       %man         %matplotlib  map          max
+```
+
 1. Press UP to cycle back through previous commands. If you start typing in the command and then press UP, it will only cycle through commands that start with those characters.
 
 1. Use `_` for a variable containing the result of the last executed command:
