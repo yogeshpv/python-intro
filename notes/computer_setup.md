@@ -2,7 +2,7 @@ This is all setup on the Zipfian workstations, but if you'd like to use your hom
 
 #### Step 1: Install Anaconda
 
-We will be using [Anaconda](https://store.continuum.io/cshop/anaconda/) with Python version 2.7. Install this and you will have Python along several usefull packages and programs:
+We will be using [Anaconda](https://store.continuum.io/cshop/anaconda/) with Python version 2.7. Install this and you will have Python along several useful packages and programs:
 
 * NumPy
 * SciPy
