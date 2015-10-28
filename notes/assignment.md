@@ -94,9 +94,9 @@ head -n 1 data/reviews 1.txt
 
 The line `il-Yamo   5` means that restaurant `Yamo` was given a rating of `5` by user `il`. Don't read too much into the review values, this was randomly generated "data". All of the places are local favorites :)
 
-You would like to know for each restaurant their average rating from each source. You will create a file with lines like this: `yamo,3.25,2.2`. The lines should be in *sorted order*. Make sure that you match the names even if their capitalization isn't the same. If a restaurant is in one file, but not the other, you should still include it and give a reasonable value for the missing number. You can see an example ouput in `example_out.csv`.
+You would like to know for each restaurant their average rating from each source. You will create a file with lines like this: `yamo,3.25,2.2`. The lines should be in *sorted order*. Make sure that you match the names even if their capitalization isn't the same. If a restaurant is in one file, but not the other, you should still include it and give a reasonable value for the missing number. You can see an example output in `example_out.csv`.
 
-You should write a python script which can be run on the commandline like this:
+You should write a python script which can be run on the command line like this:
 
 ```shell
 python script.py data/reviews1.txt data/reviews2.txt out.csv
