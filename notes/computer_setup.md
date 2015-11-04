@@ -21,10 +21,11 @@ You can use [conda](http://www.continuum.io/blog/conda) or pip to install any pa
 pip install flask
 ```
 
-#### Step 2: Install Atom
+#### Step 2: Install Atom or Sublime
 
-We will use Atom for editing (If you have mastered `vi` or `emacs`, there is no need to switch). When you are working alone, you are welcome to use any editor you'd like. You can download [Atom](https://atom.io) for free, or install via `brew`:
+We will use Atom or Sublime for editing (If you have mastered `vi` or `emacs`, there is no need to switch). When you are working alone, you are welcome to use any editor you'd like. You can download [Atom](https://atom.io) or [Sublime](http://www.sublimetext.com/2) for free, or install via `brew`:
 
 ```
 brew cask install atom
+brew cask install sublime-text
 ```
