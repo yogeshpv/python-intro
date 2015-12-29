@@ -78,7 +78,7 @@ For `list_of_words` and `find_new_words` you should be able to get a *big* impro
 
 ## Part 3: A Python Script
 
-You are given two files which contain reviews from two different sources. They files are in the `data` folder: `reviews1.txt` and `reviews2.txt`.
+You are given two files which contain reviews from two different sources. The files are in the `data` folder: `reviews1.txt` and `reviews2.txt`.
 
 Take a look at the data. In the command line, this is especially useful if you have large files:
 
