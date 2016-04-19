@@ -16,8 +16,10 @@ def write_to_file(lst, f):
 
     Hint: Use enumerate for cleaner code
     """
+    for i,v in enumerate(lst):
+        f.write(str(i+1) + ' ' + str(v) + '\n')
 
-    pass
+
 
 
 def merge_files(f1, f2, out):
@@ -41,8 +43,12 @@ def merge_files(f1, f2, out):
 
     Hint: Use izip
     """
+    l1 = f1.readlines()
+    l2 = f2.readlines()
 
-    pass
+    for a,b in izip(l1,l2):
+        out.write(a.rstrip('\n') + ',' + b)
+
 
 
 def key_in_value(d):
@@ -60,8 +66,8 @@ def key_in_value(d):
     Hint: Use iteritems
     (Can be done on one line with a list comprehension)
     """
+    return [k for k,v in d.iteritems() if k in v]
 
-    pass
 
 
 def most_common_letters(sentence):
@@ -80,9 +86,8 @@ def most_common_letters(sentence):
     (It is possible to do this in one line, but you might lose some
     readability)
     """
-
-    pass
-
+    
+    return ' '.join([i[0] for i in [sorted(Counter(words),key=Counter(words).get,reverse=True) for words in sentence.lower().split(' ')]])
 
 def merge_dictionaries(d1, d2):
     """
@@ -96,5 +101,16 @@ def merge_dictionaries(d1, d2):
     Create a new dictionary that contains all the key, value pairs from d1 and
     d2. If a key is in both dictionaries, sum the values.
     """
+    k1 = set(d1.keys())
+    k2 = set(d2.keys())
 
-    pass
+    sumDict = {}
+    newDict = d1.copy()
+    common_keys = list(k1 & k2)
+    for k in common_keys:
+        sumDict[k] = d1[k] + d2[k]
+
+    newDict.update(d2)
+    newDict.update(sumDict)
+
+    return newDict
