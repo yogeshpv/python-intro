@@ -2,8 +2,9 @@
 
 import sys
 import os
-
+from collections import defaultdict
 from collections import *
+from numpy import mean
 
 
 def main():
@@ -23,21 +24,38 @@ def main():
 
     reviews1 = {}
     reviews2 = {}
+    reviews1 = defaultdict(list)
+    reviews2 = defaultdict(list)
     for l in f1.readlines():
-        rating = l.strip()[-1:]
+        rating = int(l.strip()[-1:])
         user = l.strip().split('-')[0].strip()
-        restaurant = l.strip().split('-')[1][:-1].strip()
+        restaurant = l.strip().split('-')[1][:-1].strip().lower()
+        reviews1[restaurant].append(rating)
+    f1.close()
 
-        reviews1[restaurant] = reviews1.get(restaurant,0)
+    for l in f2.readlines():
+        rating = int(l.strip()[-1:])
+        user = l.strip().split('-')[0].strip()
+        restaurant = l.strip().split('-')[1][:-1].strip().lower()
+        reviews2[restaurant].append(rating)
+    f2.close()
 
+    # Merging file data
+    review1_keys = set(reviews1.keys())
+    review2_keys = set(reviews2.keys())
 
+    temp_reviews = {}
+    merge_reviews = reviews1.copy()
+    common_keys = list(review1_keys & review2_keys)
+    for k in common_keys:
+        temp_reviews[k] = reviews1[k] + reviews2[k]
 
+    merge_reviews.update(reviews2)
+    merge_reviews.update(temp_reviews)
 
-        print '{} -- {} -- {}'.format(user, restaurant, rating)        
-
-
-    
-
+    for restaurant, ratings in merge_reviews.iteritems():
+        o.write(restaurant + ' ' + str(mean(ratings)) + '\n')
+    o.close()
 
 if __name__ == '__main__':
     main()
