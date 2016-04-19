@@ -5,13 +5,15 @@ def list_of_words(f):
 
     Create a list of all the unique words in the text file given.
     """
+    
+    words = set()
+    all_lines = ''.join(f.readlines())
+    for word in all_lines.split():
+        words.add(word)
 
-    words = []
-    for line in f:
-        for word in line.strip().split():
-            if word not in words:
-                words.append(word)
     return words
+
+
 
 
 def find_new_words(f, word_dict):
@@ -24,11 +26,13 @@ def find_new_words(f, word_dict):
     """
 
     words = []
-    for line in f:
-        for word in line.strip().split():
-            if word not in word_dict.keys():
-                words.append(word)
+    all_lines = ''.join(f.readlines())
+    for word in all_lines.strip().split():
+        if(word_dict.get(word) == None):
+            words.append(word)
+
     return words
+
 
 
 def get_average_score(f, word_dict):
@@ -45,12 +49,15 @@ def get_average_score(f, word_dict):
     count = 0
     for line in f:
         for word in line.strip().split():
-            try:
-                value = word_dict[word]
-            except KeyError:
-                value = 1
-            score += value
+            # try:
+            #     value = word_dict[word]
+            # except KeyError:
+            #     value = 1
+            # score += value
+            # count += 1
+            score = word_dict.get(word,1)
             count += 1
+            
     return float(score) / count
 
 
